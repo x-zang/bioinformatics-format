@@ -107,15 +107,16 @@ unmapped bam is recommended in GATK and other tools
 
 ##### .vcf.idx
 
-The index file of .vcf.
+The index file of .vcf. Use IGV or [igvtools](https://software.broadinstitute.org/software/igv/igvtools_commandline) to generate.
 
 ```
-
+# make file.vcf.idx with igvtools
+igvtools index file.vcf 
 ```
 
 ##### .tbi
 
-.tbi is index file of compressed vcf file (.vcf.gz). Use [bgzip](http://www.htslib.org/doc/bgzip.html) to compress .vcf file and use [tabix](http://www.htslib.org/doc/tabix.html) to generate .tbi file
+.tbi is index file of compressed vcf file (.vcf.gz). Use [bgzip](http://www.htslib.org/doc/bgzip.html) to compress .vcf file and use [tabix](http://www.htslib.org/doc/tabix.html) to generate .tbi file.
 
 ```
 # make file.vcf.gz
