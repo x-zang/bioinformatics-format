@@ -135,6 +135,12 @@ tabix -p vcf file.vcf.gz
 ```
 unzip file.zip
 gunzip file.gz
-tar -zcvf file.tar.gz
-```
+# To keep original file, use -k/--keep
+unzip -k file.zip
+# zcat outputs to stdout
+zcat file.gz > file
 
+# .tar.gz and .tgz are the same thing
+tar -zcvf file.tar.gz
+tar -zcvf file.tgz
+```
