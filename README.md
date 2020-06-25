@@ -6,14 +6,14 @@ This is a list of (oversimplified) description of different file formats used in
 
 ## Sequence, alignment, index
 
-##### .fasta/.fa
+#### .fasta/.fa
 
 ```
 > Id comment
 AAAAATTTTTTTCCCCCCGGGGGG
 ```
 
-##### .fastq/.fq
+#### .fastq/.fq
 
 ```
 @Id comment
@@ -22,9 +22,9 @@ AAAAATTTTTTTCCCCCCGGGGGG
 ..dsadfsf
 ```
 
-##### SRA
+#### SRA
 
-It is not exactly a file format but frequently used. SRA stands for Short Sequence Archive, a NCBI database. To retrieve .fastq from SRA, you need sratoolkit.
+It is not exactly a file format but frequently used. SRA stands for Short Read Archive, a NCBI database. To retrieve .fastq from SRA, you need sratoolkit.
 
 ```
 fastq-dump
@@ -32,13 +32,13 @@ fastq-dump
 
 
 
-##### .fai
+#### .fai
 
 ```
 
 ```
 
-##### .dict
+#### .dict
 
 ```
 
@@ -46,7 +46,7 @@ fastq-dump
 
 
 
-##### .sam/.bam
+#### .sam/.bam
 
  http://samtools.github.io/hts-specs/SAMv1.pdf
 
@@ -54,7 +54,7 @@ fastq-dump
 
 ```
 
-##### .unmapped.bam/.ubam:
+#### .unmapped.bam/.ubam:
 
 unmapped bam is recommended in GATK and other tools 
 
@@ -97,7 +97,7 @@ unmapped bam is recommended in GATK and other tools
 
 ## Variant calling
 
-##### .vcf/.bcf
+#### .vcf/.bcf
 
 [.vcf](http://samtools.github.io/hts-specs/VCFv4.2.pdf) is Variant Calling Format. bcf is binary .vcf.
 
@@ -105,7 +105,7 @@ unmapped bam is recommended in GATK and other tools
 
 ```
 
-##### .vcf.idx
+#### .vcf.idx
 
 The index file of .vcf. Use IGV or [igvtools](https://software.broadinstitute.org/software/igv/igvtools_commandline) to generate.
 
@@ -114,7 +114,7 @@ The index file of .vcf. Use IGV or [igvtools](https://software.broadinstitute.or
 igvtools index file.vcf 
 ```
 
-##### .tbi
+#### .tbi
 
 .tbi is index file of compressed vcf file (.vcf.gz). Use [bgzip](http://www.htslib.org/doc/bgzip.html) to compress .vcf file and use [tabix](http://www.htslib.org/doc/tabix.html) to generate .tbi file.
 
@@ -130,16 +130,13 @@ tabix -p vcf file.vcf.gz
 
 ## Others
 
-##### Compressed files
+#### Compressed files
 
 ```
 unzip file.zip
 gunzip file.gz
-# To keep original file, use -k/--keep
-unzip -k file.zip
 # zcat outputs to stdout
 zcat file.gz > file
-
 # .tar.gz and .tgz are the same thing
 tar -zcvf file.tar.gz
 tar -zcvf file.tgz
