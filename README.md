@@ -15,11 +15,13 @@ AAAAATTTTTTTCCCCCCGGGGGG
 
 #### .fastq/.fq
 
+Consists of multiple four-lines: ID, sequence, + sign, quality score
+
 ```
-@Id comment
-AAAAATTTTTTTCCCCCCGGGGGG
+@HWI-D00119:50:H7AP8ADXX:1:1101:1213:2058 1:N:0:TAAGGCGA
+ACTCCAGCCTGGGCAACAGAGCAAGGCTCGGTCTCCCAAAAAAAAAAAAAAAAAAAAAAAATTGGAACTCATTTAAAAACACTTATGAAGAGTTCATTTCT
 +
-..dsadfsf
+@@@D?BD?A>CBDCED;EFGF;@B3?::8))0)8?B>B@FGCFEEBC######################################################
 ```
 
 #### SRA
@@ -71,7 +73,7 @@ unmapped bam is recommended in GATK and other tools
 
 ## Genome features
 
-.gtf/.gff
+#### .gtf/.gff
 
 ```
 
@@ -79,7 +81,7 @@ unmapped bam is recommended in GATK and other tools
 
 
 
-.bed 
+#### .bed 
 
 ```
 
@@ -87,7 +89,7 @@ unmapped bam is recommended in GATK and other tools
 
 
 
-.wig
+#### .wig
 
 ```
 
