@@ -13,6 +13,8 @@ This is a list of (oversimplified) description of different file formats used in
 AAAAATTTTTTTCCCCCCGGGGGG
 ```
 
+
+
 #### .fastq/.fq
 
 Consists of multiple four-lines: ID, sequence, + sign, quality score
