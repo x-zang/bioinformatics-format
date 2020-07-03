@@ -1,6 +1,6 @@
 # Bioinformatics-format
 
-This is a list of (oversimplified) description of different file formats used in bioinformatics.
+This is a list of (oversimplified) descriptions of different file formats used in bioinformatics.
 
 
 
@@ -30,7 +30,7 @@ ACTCCAGCCTGGGCAACAGAGCAAGGCTCGGTCTCCCAAAAAAAAAAAAAAAAAAAAAAAATTGGAACTCATTTAAAAAC
 
 #### SRA
 
-It is not exactly a file format but frequently used. SRA stands for Sequence Read Archive, a NCBI database. To retrieve .fastq from SRA, you need sratoolkit.
+It is not exactly a file format but frequently used. SRA stands for Sequence Read Archive, an NCBI database. To retrieve .fastq from SRA, you need sratoolkit.
 
 ```
 # download & dump with SRR run accession
@@ -64,7 +64,7 @@ samtools dict Homo_sapiens_assembly38.genome.fasta -o Homo_sapiens_assembly38.ge
 
  http://samtools.github.io/hts-specs/SAMv1.pdf
 
-```
+```shell
 samtools view file.bam > file.sam
 ```
 
@@ -72,15 +72,16 @@ samtools view file.bam > file.sam
 
 #### .unmapped.bam/.ubam:
 
-unmapped bam is recommended in GATK and other tools 
+Unmapped bam is recommended in GATK and other tools to replace fastq. It is bam file, without alignment information.
 
-```
+Convert fastq to ubam using GATK `FastqToSam`.
 
-```
-
-```
-# Convert fastq to ubam using GATK FastqToSam
-
+```shell
+gatk FastqToSam \
+-F1 reads_R1.fastq \
+-F2 reads_R2.fastq \
+-O reads.unmapped.bam \
+--SAMPLE_NAME sample001
 ```
 
 
