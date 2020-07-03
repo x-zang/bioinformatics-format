@@ -24,12 +24,16 @@ ACTCCAGCCTGGGCAACAGAGCAAGGCTCGGTCTCCCAAAAAAAAAAAAAAAAAAAAAAAATTGGAACTCATTTAAAAAC
 @@@D?BD?A>CBDCED;EFGF;@B3?::8))0)8?B>B@FGCFEEBC######################################################
 ```
 
+
+
 #### SRA
 
-It is not exactly a file format but frequently used. SRA stands for Short Read Archive, a NCBI database. To retrieve .fastq from SRA, you need sratoolkit.
+It is not exactly a file format but frequently used. SRA stands for Sequence Read Archive, a NCBI database. To retrieve .fastq from SRA, you need sratoolkit.
 
 ```
-fastq-dump
+# download & dump with SRR run accession
+prefetch SRR0000000
+fastq-dump --gzip --split-files SRR0000000
 ```
 
 
