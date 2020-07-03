@@ -55,7 +55,7 @@ samtools faidx Homo_sapiens_assembly38.genome.fasta
 sequence dictionary file 
 
 ```shell
-samtools dict Homo_sapiens_assembly38.genome.fasta -o Homo_sapiens_assembly38.genome.fasta.dict
+samtools dict Homo_sapiens_assembly38.genome.fasta -o Homo_sapiens_assembly38.genome.dict
 ```
 
 
