@@ -36,14 +36,20 @@ fastq-dump
 
 #### .fai
 
-```
+Index file for genome. See http://www.htslib.org/doc/faidx.html
 
 ```
+samtools faidx Homo_sapiens_assembly38.genome.fasta
+```
+
+
 
 #### .dict
 
-```
+sequence dictionary file 
 
+```shell
+samtools dict Homo_sapiens_assembly38.genome.fasta -o Homo_sapiens_assembly38.genome.fasta.dict
 ```
 
 
@@ -53,8 +59,10 @@ fastq-dump
  http://samtools.github.io/hts-specs/SAMv1.pdf
 
 ```
-
+samtools view file.bam > file.sam
 ```
+
+
 
 #### .unmapped.bam/.ubam:
 
@@ -107,6 +115,8 @@ unmapped bam is recommended in GATK and other tools
 
 ```
 
+
+
 #### .vcf.idx
 
 The index file of .vcf. Use IGV or [igvtools](https://software.broadinstitute.org/software/igv/igvtools_commandline) to generate.
@@ -115,6 +125,8 @@ The index file of .vcf. Use IGV or [igvtools](https://software.broadinstitute.or
 # make file.vcf.idx with igvtools
 igvtools index file.vcf 
 ```
+
+
 
 #### .tbi
 
