@@ -84,6 +84,14 @@ gatk FastqToSam \
 --SAMPLE_NAME sample001
 ```
 
+## Graph representation
+
+#### .gfa
+
+#### .gam (graph-version bam)
+
+#### .vg, .xg
+
 
 
 ## Genome features
