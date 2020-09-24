@@ -66,6 +66,24 @@ samtools dict Homo_sapiens_assembly38.genome.fasta -o Homo_sapiens_assembly38.ge
 
 ```shell
 samtools view file.bam > file.sam
+santools view -b file.sam > file.sam
+```
+
+There are 11 mandatory fields in sam/bam format
+
+```
+Col Field 	Type 			Regexp/Range 									Brief description
+1 	QNAME		String 		[!-?A-~]{1,254}								Query template NAME
+2 	FLAG 		Int 			[0, 216 − 1] 									bitwise FLAG
+3 	RNAME 	String 		\*|[:rname:∧*=][:rname:]* 		Reference sequence NAME11 
+4 	POS 		Int 			[0, 231 − 1]					 				1-based leftmost mapping POSition
+5 	MAPQ 		Int 			[0, 28 − 1] 									MAPping Quality
+6 	CIGAR 	String 		\*|([0-9]+[MIDNSHPX=])+ 			CIGAR string
+7 	RNEXT 	String 		\*|=|[:rname:∧*=][:rname:]* 	Reference name of the mate/next read 
+8 	PNEXT 	Int 			[0, 231 − 1] 									Position of the mate/next read
+9 	TLEN 		Int 			[−231 + 1, 231 − 1] 					observed Template LENgth
+10 	SEQ 		String 		\*|[A-Za-z=.]+ 								segment SEQuence
+11 	QUAL 		String 		[!-~]+ 												ASCII of Phred-scaled base QUALity+33
 ```
 
 
@@ -125,10 +143,6 @@ gatk FastqToSam \
 #### .vcf/.bcf
 
 [.vcf](http://samtools.github.io/hts-specs/VCFv4.2.pdf) is Variant Calling Format. bcf is binary .vcf.
-
-```
-
-```
 
 
 
