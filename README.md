@@ -4,7 +4,7 @@ This is a list of (oversimplified) descriptions of different file formats used i
 
 
 
-## Sequence, alignment, index
+## Sequence, index
 
 #### .fasta/.fa
 
@@ -58,7 +58,7 @@ sequence dictionary file
 samtools dict Homo_sapiens_assembly38.genome.fasta -o Homo_sapiens_assembly38.genome.dict
 ```
 
-
+## Alignment, Index
 
 #### .sam/.bam
 
@@ -101,6 +101,14 @@ gatk FastqToSam \
 -O reads.unmapped.bam \
 --SAMPLE_NAME sample001
 ```
+
+#### .bai
+
+```shell
+samtools index file.bam
+```
+
+
 
 ## Graph representation
 
