@@ -2,6 +2,8 @@
 
 This is a list of (oversimplified) descriptions of different file formats used in bioinformatics.
 
+UCSC host a (relatively ) more comprehensive [list](http://genome.ucsc.edu/FAQ/FAQformat.html).
+
 
 
 ## Sequence, index
@@ -11,13 +13,16 @@ This is a list of (oversimplified) descriptions of different file formats used i
 ```
 > Id comment
 AAAAATTTTTTTCCCCCCGGGGGG
+GGGGCCCCNNAAAAAAAACCCCCC
 ```
+
+Anyline starting with `>` is a new sequence's name and consecutive lines are its sequences.
 
 
 
 #### .fastq/.fq
 
-Consists of multiple four-lines: ID, sequence, + sign, quality score
+Consists of multiple 4-lines: ID, sequence, + sign, quality score
 
 ```
 @HWI-D00119:50:H7AP8ADXX:1:1101:1213:2058 1:N:0:TAAGGCGA
@@ -25,6 +30,8 @@ ACTCCAGCCTGGGCAACAGAGCAAGGCTCGGTCTCCCAAAAAAAAAAAAAAAAAAAAAAAATTGGAACTCATTTAAAAAC
 +
 @@@D?BD?A>CBDCED;EFGF;@B3?::8))0)8?B>B@FGCFEEBC######################################################
 ```
+
+See also [unmapped bam](####.unmapped.bam/.ubam:), a format containing same information as fastq.
 
 
 
@@ -57,6 +64,8 @@ sequence dictionary file
 ```shell
 samtools dict Homo_sapiens_assembly38.genome.fasta -o Homo_sapiens_assembly38.genome.dict
 ```
+
+
 
 ## Alignment, Index
 
