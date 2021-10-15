@@ -132,6 +132,7 @@ samtools index file.bam
 ## Genome features
 
 #### .gtf/.gff
+Both `.gtf` and `.gvf` are two specific types of `.gff`.
 
 ```
 
