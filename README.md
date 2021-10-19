@@ -18,6 +18,10 @@ GGGGCCCCNNAAAAAAAACCCCCC
 
 Anyline starting with `>` is a new sequence's name and consecutive lines are its sequences.
 
+```
+# TO remove comment
+sed -e 's/^\(>[^[:space:]]*\).*/\1/' my.fasta > mymodified.fasta
+```
 
 
 #### .fastq/.fq
