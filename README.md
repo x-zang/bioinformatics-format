@@ -177,7 +177,15 @@ The index file of .vcf. Use IGV or [igvtools](https://software.broadinstitute.or
 igvtools index file.vcf 
 ```
 
+#### Specifications explained from [10X genome](https://support.10xgenomics.com/genome-exome/software/pipelines/latest/output/vcf)
 
+#### `GT `field
+
+The `GT` (genotype) field encodes allele values separated by either of `/` unphased  or `|` phased.  For phased genotypes, the allele to the left of the bar is haplotype 1, and the allele to the right of the bar is haplotype 2.
+
+#### `PS` field
+
+Variants with the same PS value are in the same phase block. Variants with different PS values are not phased with respect to one another. e.g. `pos 1000, GT:PS 1|0:PS1  ` and `pos 2000GT:PS 1|2:PS2` are not phased together, but `pos 1000, GT:PS 1|0:PS1` and `pos 1050, GT:PS 0|1:PS1` are phased.
 
 #### .tbi
 
