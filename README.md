@@ -146,8 +146,11 @@ Both `.gtf` and `.gvf` are two specific types of `.gff`.
 
 #### .bed 
 
-```
+0-based format, at least 3 columns
 
+```
+#chr	start	end
+chr1	0	100
 ```
 
 
