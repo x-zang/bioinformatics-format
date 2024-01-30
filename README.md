@@ -136,10 +136,10 @@ samtools index file.bam
 ## Genome features
 
 #### .gtf/.gff
-Both `.gtf` and `.gvf` are two specific types of `.gff`.
-
+tab-separated vector file, gtf https://useast.ensembl.org/info/website/upload/gff.html
 ```
-
+#<seqname> <source> <feature> <start> <end> <score> <strand> <frame> <attributes>
+1 sourcename  gene 11869 14409 1000 + . gene_id "ENSG00000223972"; gene_name "DDX11L1"; gene_source "havana"; gene_biotype "transcribed_unprocessed_pseudogene";
 ```
 
 
