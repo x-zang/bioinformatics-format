@@ -1,5 +1,7 @@
 # Bioinformatics-format
 
+**Archived. Similar information is easily available from an AI chatbot such as ChatGPT.**
+
 This is a list of (oversimplified) descriptions of different file formats used in bioinformatics.
 
 UCSC host a (relatively ) more comprehensive [list](http://genome.ucsc.edu/FAQ/FAQformat.html).
@@ -152,15 +154,6 @@ tab-separated vector file, gtf https://useast.ensembl.org/info/website/upload/gf
 #chr	start	end
 chr1	0	100
 ```
-
-
-
-#### .wig
-
-```
-
-```
-
 
 
 ## Variant calling
